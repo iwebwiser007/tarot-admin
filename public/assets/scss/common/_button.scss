@@ -1,0 +1,79 @@
+@import "./variable";
+@import "./mixins";
+
+.btn {
+  @include flex-center;
+  gap: 6px;
+  font-size: $fs-8;
+  padding: $fs-5 0.7rem;
+
+  &:active {
+    border: 0;
+    outline: 0;
+  }
+  &:focus {
+    border: 0;
+    outline: 0;
+  }
+}
+
+// teal color button
+.btn-teal {
+  background-color: $primary;
+  color: $white;
+  font-size: $fs-8;
+  &:hover {
+    background-color: rgba($color: $primary, $alpha: 0.9);
+    color: $white;
+  }
+  &:active {
+    background-color: $primary !important;
+    color: $white !important;
+  }
+}
+
+// red button (background red)
+.cance-btn {
+  background-color: $danger;
+  color: $white;
+  font-size: $fs-8;
+  &:hover {
+    background-color: rgba($color: $danger, $alpha: 0.7);
+    color: $white;
+  }
+  &:active {
+    background-color: $danger !important;
+    color: $white !important;
+  }
+}
+
+// red outline button
+.close_btn {
+  border: 1px solid rgba($color: $secondary, $alpha: 0.4);
+  padding: 0.25rem 0.5rem;
+
+  &:hover {
+    border: 1px solid rgba($color: $secondary, $alpha: 0.4);
+  }
+  &:active {
+    border: 1px solid rgba($color: $secondary, $alpha: 0.4);
+  }
+  &:focus {
+    border: 1px solid rgba($color: $secondary, $alpha: 0.4);
+  }
+}
+
+// blue button
+.blue_btn {
+  background-color: $tertiary;
+  color: white;
+
+  &:hover {
+    background-color: rgba($color: $tertiary, $alpha: 0.8);
+    color: $white;
+  }
+  &:active {
+    background-color: rgba($color: $tertiary, $alpha: 1);
+    color: $white;
+  }
+}

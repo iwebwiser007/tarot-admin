@@ -1,0 +1,91 @@
+@import "./variable";
+
+.login-section {
+  height: 100vh;
+  background: url("/assets/images/background.jpg") no-repeat fixed center;
+  background-size: 100% 100%;
+  // background-size: contain;
+  // padding: 3rem 0;
+  padding-top: 7rem;
+
+  h2 {
+    font-size: $fs-15;
+    font-weight: $fw-600;
+    color: $primary;
+  }
+  p {
+    font-size: $fs-base;
+    font-weight: $fw-500;
+    color: $secondary;
+  }
+
+  .forgot_pass {
+    color: $tertiary;
+    font-weight: $fw-500;
+  }
+
+  .form_area {
+    .form-label {
+      font-size: $fs-8;
+    }
+    .form-control::placeholder {
+      font-size: $fs-8;
+    }
+    // .password_div {
+    //   .search_icon {
+    //     transform: translate(-10px, 10px);
+    //   }
+    // }
+  }
+}
+.form-div {
+  .password_div {
+    .search_icon {
+      transform: translate(-12px, 8px);
+    }
+  }
+}
+// brand logo
+.brand-logo {
+  img {
+    width: 7rem;
+    height: 5rem;
+    // width: calc($spacing * 5);
+    // height: calc(($spacing * 3) + $fs-5);
+  }
+}
+.login-title {
+  text-align: center;
+  margin-bottom: 1rem;
+  h2{
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: rgba($color: $secondary, $alpha: 0.9);
+  }
+}
+@media (max-width: $md) {
+  .login-section {
+    height: 100vh;
+    background: url("/assets/images/background.jpg") no-repeat fixed center;
+    background-size: 100% 100%;
+    padding-top: 4rem;
+  }
+}
+
+@media (min-width: $md) and (max-width: $lg) {
+  .login-section {
+    height: 100vh;
+    background: url("/assets/images/background.jpg") no-repeat fixed center;
+    background-size: 100% 100%;
+    padding-top: 4rem;
+  }
+}
+
+@media (min-width: $lg) and (max-width: $xxl) {
+  .login-section {
+    height: 100vh;
+    background: url("/assets/images/background.jpg") no-repeat fixed center;
+    background-size: 100% 100%;
+    padding-top: 4rem;
+  }
+}

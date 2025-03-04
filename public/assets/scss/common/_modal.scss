@@ -1,0 +1,9 @@
+@import "./variable";
+@import "./mixins";
+
+.modal {
+  .modal-dialog {
+    // padding: 1rem 1rem;
+    padding: $spacing $spacing;
+  }
+}

@@ -1,0 +1,291 @@
+@import "./variable";
+@import "./mixins";
+
+.table-responsive {
+  table {
+    width: 100%;
+    text-align: center;
+
+    th,
+    tr,
+    td {
+      max-width: $margin;
+      padding: $fs-8 0;
+      text-align: center;
+      vertical-align: middle;
+      color: rgba($color: $secondary, $alpha: 1);
+      border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+    }
+    th {
+      font-weight: $fw-500;
+      background-color: rgb(4 170 158);
+      color: $white;
+    }
+    tbody {
+      .list_div {
+        ul {
+          li {
+            padding: calc($fs-6 - $fs-5) $fs-5;
+            border-radius: $radius-8;
+
+            &:not(:last-child)::after {
+              content: ",";
+            }
+          }
+        }
+      }
+
+      // billing image
+      .billing_img {
+        // width: 3rem;
+        // height: 3rem;
+        width: calc($margin * 2);
+        height: calc($margin * 2);
+        margin: 0 auto;
+
+        img {
+          width: 100%;
+          height: 100%;
+          border-radius: 50%;
+        }
+      }
+
+      // plan image
+      .plan_img {
+        width: calc($margin * 2);
+        height: calc($margin * 2);
+        margin: 0 auto;
+
+        img {
+          width: 70%;
+          height: 70%;
+        }
+      }
+
+      .table-action {
+        max-width: calc($spacing * 2);
+      }
+    }
+  }
+
+  .detail-table {
+    width: 100%;
+    text-align: center;
+    th,
+    tr,
+    td {
+      max-width: $spacing;
+      padding: $fs-8 calc($fs-8 - $fs-5);
+      text-align: left;
+      border-bottom: 0;
+      border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+      font-size: $fs-8;
+      font-weight: $fw-normal;
+    }
+    tr:first-child {
+      border-top: 1px solid rgba($color: $secondary, $alpha: 0.2);
+    }
+
+    tbody {
+      span {
+        font-weight: $fw-500;
+        text-decoration: underline;
+      }
+      ul {
+        list-style: inside;
+      }
+    }
+  }
+
+  .dash_table {
+    width: 100%;
+    th,
+    tr,
+    td {
+      max-width: $margin;
+      font-weight: $fw-500;
+      text-align: left;
+      vertical-align: middle;
+      color: rgba($color: $secondary, $alpha: 1);
+      border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+    }
+    tbody {
+      p {
+        font-weight: $fw-600;
+      }
+    }
+  }
+
+  .differnt-table {
+    width: 100%;
+
+    th,
+    tr,
+    td {
+      max-width: $fs-5;
+      padding: $fs-8 $fs-6;
+      text-align: left;
+      vertical-align: middle;
+      color: rgba($color: $secondary, $alpha: 1);
+      border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+    }
+    th {
+      font-weight: $fw-500;
+      background-color: rgb(4 170 158);
+      color: $white;
+    }
+    .small-col {
+      width: 20%;
+      white-space: nowrap;
+    }
+  }
+}
+
+@media (max-width: $md) {
+  .table-responsive {
+    table {
+      width: 100%;
+      text-align: center;
+
+      th,
+      tr,
+      td {
+        max-width: calc($lg-spacing * 4);
+        padding: $fs-8 $fs-5;
+        text-align: center;
+        vertical-align: center;
+        border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+      }
+      tr {
+        white-space: nowrap;
+
+        text-overflow: ellipsis;
+        padding: 0 $fs-5;
+      }
+
+      tbody {
+        // plan image
+        .plan_img {
+          width: calc($margin * 2);
+          height: calc($margin * 2);
+          margin: 0 auto;
+
+          img {
+            width: 70%;
+            height: 70%;
+          }
+        }
+        .table-action {
+          max-width: calc(($lg-spacing * 4) + $fs-5);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $md) and (max-width: $lg) {
+  .table-responsive {
+    table {
+      width: 100%;
+      text-align: center;
+
+      th,
+      tr,
+      td {
+        max-width: calc($lg-spacing * 4);
+        padding: $fs-8 $fs-5;
+        text-align: center;
+        vertical-align: center;
+        border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+      }
+
+      tr {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 0 $fs-5;
+      }
+
+      tbody {
+        // plan image
+        .plan_img {
+          width: calc($margin * 2);
+          height: calc($margin * 2);
+          margin: 0 auto;
+
+          img {
+            width: 70%;
+            height: 70%;
+          }
+        }
+        .table-action {
+          max-width: calc(($lg-spacing * 4) + $fs-5);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $lg) and (max-width: $xl) {
+  .table-responsive {
+    table {
+      width: 100%;
+      text-align: center;
+
+      th,
+      tr,
+      td {
+        max-width: calc(($lg-spacing * 4) + $spacing);
+        padding: $fs-8 $fs-5;
+        text-align: center;
+        vertical-align: center;
+        border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+      }
+      tr {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 0 $fs-5;
+      }
+
+      tbody {
+        // plan image
+        .plan_img {
+          width: calc($margin * 2);
+          height: calc($margin * 2);
+          margin: 0 auto;
+
+          img {
+            width: 70%;
+            height: 70%;
+          }
+        }
+        .table-action {
+          max-width: calc(($lg-spacing * 4) + $margin);
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: $xl) and (max-width: $xxl) {
+  .table-responsive {
+    table {
+      width: 100%;
+      text-align: center;
+
+      th,
+      tr,
+      td {
+        max-width: calc(($lg-spacing * 4) + $spacing);
+        padding: $fs-8 $fs-5;
+        text-align: center;
+        vertical-align: center;
+        border-bottom: 1px solid rgba($color: $secondary, $alpha: 0.2);
+      }
+      tr {
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        padding: 0 $fs-5;
+      }
+    }
+  }
+}

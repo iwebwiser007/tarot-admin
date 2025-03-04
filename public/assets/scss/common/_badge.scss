@@ -1,0 +1,9 @@
+@import "./variable";
+@import "./mixins";
+
+
+.badge{
+  font-size: $fs-7;
+  font-weight: calc($fw-500 + 50);
+  border-radius: $radius-8;
+}

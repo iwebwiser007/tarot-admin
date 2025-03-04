@@ -1,0 +1,16 @@
+@import "./variable";
+@import "./mixins";
+
+.offcanvas {
+  .offcanvas-header {
+    // padding: $padding calc($spacing + $fs-8);
+    // padding: 1rem 1.8rem 0.2rem 1.8rem;
+    padding: 1rem 1.8rem 0.2rem 1.8rem;
+    
+    h1 {
+      font-size: $fs-13;
+      font-weight: $fw-500;
+      color: $primary;
+    }
+  }
+}

@@ -1,0 +1,101 @@
+// colors
+$primary: #04aa9e;
+$secondary: #384555;
+$tertiary: #018dd8;
+
+$white: #fff;
+$black: #000;
+$gray: #7b8191;
+
+$dark-1: #037f76;
+$dark-2: #039086;
+$primary-1: #29b6ac;
+$primary-2: #42bfb6;
+$primary-3: #81d4ce;
+$primary-4: #c0e9e6;
+$primary-5: #e5f6f5;
+
+$back-color: #ebf8f7;
+$back-color-1: #f2fafa;
+
+$dark-gray: #222222;
+$gray: #cccccc;
+$border-color: #ededf5;
+
+$danger: #cc3333;
+
+// spacing units
+$spacing: 1rem;
+$lg-spacing: 2rem;
+$margin: 1.5rem;
+$padding: 1.5rem;
+
+// font family
+$font-family: "Poppins", serif;
+
+// box shadow
+$box-shadow: rgba(
+      $color: $primary,
+      $alpha: 0.12,
+    )
+    0px 1px 3px,
+  rgba(
+      $color: $primary,
+      $alpha: 0.24,
+    )
+    0px 1px 2px;
+
+$box-shadow-1: rgba(
+    $color: $primary,
+    $alpha: 0.2,
+  )
+  0px 0px 0px 1px;
+
+// font size
+$fs-5: 0.5rem;
+$fs-6: 0.6rem;
+$fs-7: 0.7rem;
+$fs-8: 0.8rem;
+$fs-9: 0.9rem;
+$fs-base: 1rem;
+$fs-12: 1.2rem;
+$fs-13: 1.3rem;
+$fs-14: 1.4rem;
+$fs-15: 1.5rem;
+
+// font-weight
+$fw-200: 200;
+$fw-300: 300;
+$fw-normal: 400;
+$fw-500: 500;
+$fw-600: 600;
+$fw-700: 700;
+$lh-normal: normal;
+$lh-15: 1.5rem;
+
+// border radius
+$radius-2: 0.2rem;
+$radius-3: 0.3rem;
+$radius-4: 0.4rem;
+$radius-5: 0.5rem;
+$radius-6: 0.6rem;
+$radius-7: 0.7rem;
+$radius-8: 0.8rem;
+$radius-9: 0.9rem;
+$radius-base: 1rem;
+$radius-11: 1.1rem;
+$radius-12: 1.2rem;
+$radius-13: 1.3rem;
+$radius-14: 1.4rem;
+$radius-15: 1.5rem;
+$radius-16: 1.6rem;
+$radius-17: 1.7rem;
+$radius-18: 1.8rem;
+
+// breakpoints
+$sm: 576px;
+$md: 769px;
+$lg: 992px;
+$xl: 1200px;
+$xxl: 1400px;
+$xxxl: 2560;
