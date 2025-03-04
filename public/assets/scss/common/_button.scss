@@ -19,13 +19,13 @@
 
 // teal color button
 .btn-teal {
-  background-color: $primary;
-  color: $white;
-  font-size: $fs-8;
-  &:hover {
-    background-color: rgba($color: $primary, $alpha: 0.9);
-    color: $white;
-  }
+  background-color: $primary !important;
+  color: $white !important;
+  font-size: $fs-9 !important;
+  // &:hover {
+  //   background-color: rgba($color: $primary, $alpha: 0.9);
+  //   color: $white;
+  // }
   &:active {
     background-color: $primary !important;
     color: $white !important;
@@ -34,13 +34,13 @@
 
 // red button (background red)
 .cance-btn {
-  background-color: $danger;
-  color: $white;
+  background-color: $danger !important;
+  color: $white !important;
   font-size: $fs-8;
-  &:hover {
-    background-color: rgba($color: $danger, $alpha: 0.7);
-    color: $white;
-  }
+  // &:hover {
+  //   background-color: rgba($color: $danger, $alpha: 0.7);
+  //   color: $white;
+  // }
   &:active {
     background-color: $danger !important;
     color: $white !important;

@@ -26,6 +26,7 @@
 
     .sidebar-logo {
       @include flex-center;
+      background-color: rgba($color: $primary, $alpha: 30%);
       .navbar-brand {
         padding: $fs-8 0;
         img {

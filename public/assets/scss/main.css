@@ -44,7 +44,8 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .header .navbar .nav-right .navbar-nav .admin_dropdown span {
   color: #04aa9e;
@@ -229,11 +230,13 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  background-color: rgba(4, 170, 158, 0.3);
 }
 .sidebar-wrapper .sidebar-content .sidebar-logo .navbar-brand {
   padding: 0.8rem 0;
 }
 .sidebar-wrapper .sidebar-content .sidebar-logo .navbar-brand img {
+  width: 7rem;
   height: 4.5rem;
 }
 .sidebar-wrapper .sidebar-content .side_head {
@@ -375,7 +378,8 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card .card-body .admin_profile {
   width: 5.5rem;
@@ -386,7 +390,8 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
-  object-fit: cover;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 .card .card-body .card-title {
   font-size: 1rem;
@@ -463,16 +468,15 @@
 .card .card-footer {
   background-color: #fff;
   border: 0;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
   padding: 0 1.5rem;
   padding-bottom: 0.6rem;
+  display: flex;
+  justify-content: space-between;
 }
 .card .card-footer select {
   border: 1px solid #ccc;
   padding: 0.4rem 0.5rem;
-  font-size: 0.8rem;
+  font-size: 0.7rem;
   font-weight: 500;
   color: rgba(56, 69, 85, 0.8);
   width: 6rem;
@@ -597,6 +601,10 @@
   font-size: 0.8rem;
   color: #384555;
 }
+.form-div form .form-control::-moz-placeholder {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
 .form-div form .form-control::placeholder {
   font-size: 0.8rem;
   font-weight: 400;
@@ -609,6 +617,10 @@
 .form-div form .form-select {
   font-size: 0.8rem;
   border: 1px solid rgba(56, 69, 85, 0.3);
+}
+.form-div form .form-select::-moz-placeholder {
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 .form-div form .form-select::placeholder {
   font-size: 0.8rem;
@@ -624,6 +636,10 @@
   font-size: 0.8rem;
   border: 1px solid rgba(56, 69, 85, 0.3);
 }
+.form-select::-moz-placeholder {
+  font-size: 0.8rem;
+  font-weight: 400;
+}
 .form-select::placeholder {
   font-size: 0.8rem;
   font-weight: 400;
@@ -637,6 +653,10 @@
 .form-control {
   font-size: 0.8rem;
   color: #384555;
+}
+.form-control::-moz-placeholder {
+  font-size: 0.8rem;
+  font-weight: 400;
 }
 .form-control::placeholder {
   font-size: 0.8rem;
@@ -760,6 +780,13 @@
   white-space: nowrap;
 }
 
+@media (max-width: 576px) {
+  .card-footer {
+    flex-direction: column;
+    gap: 1rem;
+    align-items: center;
+  }
+}
 @media (max-width: 769px) {
   .table-responsive table {
     width: 100%;
@@ -775,9 +802,7 @@
     border-bottom: 1px solid rgba(56, 69, 85, 0.2);
   }
   .table-responsive table tr {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding: 0 0.5rem;
+    font-size: 0.9rem;
   }
   .table-responsive table tbody .plan_img {
     width: 3rem;
@@ -807,9 +832,7 @@
     border-bottom: 1px solid rgba(56, 69, 85, 0.2);
   }
   .table-responsive table tr {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding: 0 0.5rem;
+    font-size: 0.9rem;
   }
   .table-responsive table tbody .plan_img {
     width: 3rem;
@@ -839,9 +862,7 @@
     border-bottom: 1px solid rgba(56, 69, 85, 0.2);
   }
   .table-responsive table tr {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding: 0 0.5rem;
+    font-size: 0.9rem;
   }
   .table-responsive table tbody .plan_img {
     width: 3rem;
@@ -871,9 +892,7 @@
     border-bottom: 1px solid rgba(56, 69, 85, 0.2);
   }
   .table-responsive table tr {
-    white-space: nowrap;
-    text-overflow: ellipsis;
-    padding: 0 0.5rem;
+    font-size: 0.9rem;
   }
 }
 .main-right-container {
@@ -1102,13 +1121,9 @@ body {
 }
 
 .btn-teal {
-  background-color: #04aa9e;
-  color: #fff;
-  font-size: 0.8rem;
-}
-.btn-teal:hover {
-  background-color: rgba(4, 170, 158, 0.9);
-  color: #fff;
+  background-color: #04aa9e !important;
+  color: #fff !important;
+  font-size: 0.9rem !important;
 }
 .btn-teal:active {
   background-color: #04aa9e !important;
@@ -1116,13 +1131,9 @@ body {
 }
 
 .cance-btn {
-  background-color: #cc3333;
-  color: #fff;
+  background-color: #cc3333 !important;
+  color: #fff !important;
   font-size: 0.8rem;
-}
-.cance-btn:hover {
-  background-color: rgba(204, 51, 51, 0.7);
-  color: #fff;
 }
 .cance-btn:active {
   background-color: #cc3333 !important;
@@ -1179,6 +1190,9 @@ body {
 .login-section .form_area .form-label {
   font-size: 0.8rem;
 }
+.login-section .form_area .form-control::-moz-placeholder {
+  font-size: 0.8rem;
+}
 .login-section .form_area .form-control::placeholder {
   font-size: 0.8rem;
 }
@@ -1188,7 +1202,7 @@ body {
 }
 
 .brand-logo img {
-  /* width: 7rem; */
+  width: 7rem;
   height: 5rem;
 }
 
@@ -1237,18 +1251,4 @@ body {
 
 .modal .modal-dialog {
   padding: 1rem 1rem;
-}
-
-.parsley-errors-list {
-  list-style: none;
-  color: rgb(210, 70, 70);
-  padding-left: 0;
-  font-size: small;
-}
-
-.toast-success {
-  background-color: rgb(0, 82, 0) !important;
-}
-.toast-error {
-  background-color: rgb(201, 51, 51) !important;
-}
+}/*# sourceMappingURL=main.css.map */
