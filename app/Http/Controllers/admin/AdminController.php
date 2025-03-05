@@ -43,7 +43,6 @@ class AdminController extends Controller
 
     public function logout()
     {
-
         Auth::logout();
         toastr_notify('Successfully logged out!', 'success');
         return redirect('/admin/login');
