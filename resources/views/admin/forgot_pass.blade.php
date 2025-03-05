@@ -5,7 +5,9 @@
 <!-- Head tag start here... -->
 
 <head>
-
+  <style>
+ 
+  </style>
   <!-- Meta tags start here... -->
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -28,14 +30,10 @@
     
   <!-- All css links end here... -->
   <!-- favicon icon start here -->
-  <!-- <link
+  <link
     rel="icon"
     type="image/x-icon"
-    href="{{ asset('public/assets/icons/logo-1-removebg-preview.png') }}" /> -->
-    <link
-    rel="icon"
-    type="image/x-icon"
-    href="{{ asset('public/assets/icons/card4.png') }}" />
+    href="{{ asset('public/assets/icons/logo-1-removebg-preview.png') }}" />
   <link href="{{ asset('public/bootstrap/css/bootstrap.min.css') }}" rel="stylesheet">
   <!-- favicon icon end here -->
 </head>

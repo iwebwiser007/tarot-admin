@@ -2,7 +2,9 @@
 use App\Http\Controllers\admin\AdminController;
 use App\Http\Controllers\admin\ClientController;
 use App\Http\Controllers\admin\CardCotroller;
+use App\Http\Controllers\admin\CategoryController;
 use App\Http\Controllers\admin\OfferController;
+use App\Http\Controllers\admin\PageController;
 use App\Http\Controllers\CardController;
 use Illuminate\Support\Facades\Route;
 
@@ -40,6 +42,22 @@ Route::middleware(['admin'])->group(function () {
     Route::match(['get', 'post'], '/admin/offer-update/{id}', [OfferController::class, 'update'])->name('admin.offer.update');
     Route::delete('/admin-offer-delete/{id}',  [OfferController::class, 'delete'])->name('admin.offer.delete');
     Route::get('admin/offers/export', [OfferController::class, 'export'])->name('admin.offers.export');
+
+    Route::match(['get', 'post'], '/admin/categories', [CategoryController::class, 'index'])->name('admin.categories');
+    Route::get('admin/category/export', [CategoryController::class, 'export'])->name('admin.category.export');
+    Route::match(['get', 'post'], '/admin/category-add', [CategoryController::class, 'add'])->name('admin.category.add');
+    Route::match(['get', 'post'], '/admin/category-store', [CategoryController::class, 'store'])->name('admin.category.store');
+    Route::get('/admin/category-edit/{id}', [CategoryController::class, 'edit'])->name('admin.category.edit');
+    Route::match(['get', 'post'], '/admin/category-update/{id}', [CategoryController::class, 'update'])->name('admin.category.update');
+    Route::delete('/admin-category-delete/{id}',  [CategoryController::class, 'delete'])->name('admin.category.delete');
+
+    Route::match(['get', 'post'], '/admin/cms-page', [PageController::class, 'index'])->name('admin.pages');
+    Route::get('admin/cms-page/export', [PageController::class, 'export'])->name('admin.page.export');
+    Route::match(['get', 'post'], '/admin/cms-page-add', [PageController::class, 'add'])->name('admin.page.add');
+    Route::match(['get', 'post'], '/admin/cms-page-store', [PageController::class, 'store'])->name('admin.page.store');
+    Route::get('/admin/cms-page-edit/{id}', [PageController::class, 'edit'])->name('admin.page.edit');
+    Route::match(['get', 'post'], '/admin/cms-page-update/{id}', [PageController::class, 'update'])->name('admin.page.update');
+    Route::delete('/admin-cms-page-delete/{id}',  [PageController::class, 'delete'])->name('admin.page.delete');
 
 
 

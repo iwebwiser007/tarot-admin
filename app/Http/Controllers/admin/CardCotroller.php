@@ -6,6 +6,7 @@ use App\Http\Controllers\Controller;
 use App\Models\Card;
 use Illuminate\Http\Request;
 use App\Exports\CardExport; // Import the export class
+use App\Models\Category;
 use Maatwebsite\Excel\Facades\Excel; // Import the Excel facade
 use Intervention\Image\Facades\Image;
 
@@ -29,7 +30,9 @@ class CardCotroller extends Controller
     }
 
     public function add(){
-        return view('admin.card.card_add');
+        $categories = Category::all();
+        return view('admin.card.card_add' , compact('categories'));
+
     }
 
     public function store(Request $request){
@@ -53,6 +56,7 @@ class CardCotroller extends Controller
             'name' => $request->name,
             'affirmation_text' => $request->affirmation_text,
             'image' => $cardPath,
+            'category_id' => $request->category,
 
         ]);
         toastr_notify('New Card Created Successfully!', 'success');
@@ -61,7 +65,8 @@ class CardCotroller extends Controller
 
     public function edit(Request $request , $id){
         $card = Card::find($id);
-        return view('admin.card.card_edit', compact('card'));
+        $categories = Category::all();
+        return view('admin.card.card_edit', compact('card' , 'categories'));
    }
 
 
@@ -85,6 +90,7 @@ class CardCotroller extends Controller
 
    $card->name = $request->name;
    $card->affirmation_text = $request->affirmation_text;
+   $card->category_id = $request->category;
    $card->save();
    toastr_notify('Card Updated Successfully!', 'success');
    return redirect()->route('admin.cards');

@@ -1,6 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
+<style>
+       .toast-success {
+  background-color: rgb(0, 82, 0) !important;
+}
+.toast-error {
+  background-color: rgb(201, 51, 51) !important;
+}
+.parsley-errors-list {
+    list-style: none;
+    color: #cd4444;
+    padding: 0px;
+  }
+</style>
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />

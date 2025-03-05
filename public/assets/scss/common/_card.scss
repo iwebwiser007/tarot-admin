@@ -153,14 +153,16 @@
   .card-footer {
     background-color: $white;
     border: 0;
-    @include flex-between-center;
+    // @include flex-between-center;
     padding: 0 $padding;
     padding-bottom: $fs-6;
+    display: flex;
+    justify-content: space-between;
 
     select {
       border: 1px solid #ccc;
       padding: calc($fs-9 - $fs-5) $fs-5;
-      font-size: $fs-8;
+      font-size: $fs-7;
       font-weight: $fw-500;
       color: rgba($color: $secondary, $alpha: 0.8);
       width: calc($lg-spacing * 3);

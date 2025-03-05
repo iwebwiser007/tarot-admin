@@ -19,13 +19,13 @@
     <div class="container-fluid">
       <div class="dash_header mt-4">
         <div class="dash_title">
-          <h2>Cards</h2>
+          <h2>Category</h2>
         </div>
-        <a href="{{ route('admin.card.add') }}" class="btn btn-teal" role="button">
+        <a href="{{ route('admin.category.add') }}" class="btn btn-teal" role="button">
           <svg xmlns="http://www.w3.org/2000/svg" height="20" viewBox="0 -960 960 960" width="20" fill="#FFFFFF">
             <path d="M440-280h80v-160h160v-80H520v-160h-80v160H280v80h160v160Zm40 200q-83 0-156-31.5T197-197q-54-54-85.5-127T80-480q0-83 31.5-156T197-763q54-54 127-85.5T480-880q83 0 156 31.5T763-763q54 54 85.5 127T880-480q0 83-31.5 156T763-197q-54 54-127 85.5T480-80Zm0-80q134 0 227-93t93-227q0-134-93-227t-227-93q-134 0-227 93t-93 227q0 134 93 227t227 93Zm0-320Z" />
           </svg>
-          Add Card
+          Add Category
         </a>
       </div>
       <div class="container-fluid">
@@ -35,14 +35,14 @@
               <div class="card-body">
                 <div class="d-flex align-items-center justify-content-between mb-3">
                   <div class="form-div">
-                    <form method="GET" action="{{ route('admin.cards') }}" class="d-flex align-items-center">
+                    <form method="GET" action="{{ route('admin.categories') }}" class="d-flex align-items-center">
                       <div class="position-relative flex-grow-1 me-2">
                         <input type="search" name="search" id="searchInput" class="form-control" placeholder="Search..." value="{{ request()->query('search') }}" />
                       </div>
                       <button type="submit" class="btn btn-teal btn-sm">Search</button>
                     </form>
                   </div>
-                  <a href="{{ route('admin.cards.export') }}" role="button" class="btn">
+                  <a href="{{route('admin.category.export')}}" role="button" class="btn">
                     <svg xmlns="http://www.w3.org/2000/svg" x="0px" y="0px" width="20" height="20" viewBox="0,0,256,256">
                       <g fill="#20c997" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal">
                         <g transform="scale(5.33333,5.33333)">
@@ -58,33 +58,31 @@
                     <thead>
                       <tr>
                         <th>Image</th>
-                        <th>Category Id</th>
-                        <th>Card name</th>
-                        <th>Affirmation text</th>
+                        <th>Title</th>
+                        <th>Description</th>
                         <th>Actions</th>
                       </tr>
                     </thead>
-                    <tbody>
-                      @foreach($cards as $card)
+                     <tbody>
+                      @foreach($categories as $category)
                       <tr>
                         <td>
                           <div
                             class="plan_img align-content-center">
                             <img
-                              src="{{ asset('storage/app/public/images/' . $card->image) }}"
+                              src="{{ asset('storage/app/public/images/' . $category->image) }}"
                               alt="card image" />
                           </div>
                         </td>
-                        <td>{{$card->category_id}}</td>
-                        <td>{{$card->name}}</td>
+                        <td>{{$category->title}}</td>
                         <td class="text-truncate">
-                          {{$card->affirmation_text}}
+                          {{$category->description}}
                         </td>
                         <td>
                           <div
                             class="d-flex align-items-start justify-content-center">
                             <a
-                              href="{{ route('admin.card.edit' , $card['id']) }}"
+                              href="{{ route('admin.category.edit' , $category['id']) }}"
                               class="btn float-end">
                               <img
                                 src="{{asset('public/assets/icons/edit.svg')}}"
@@ -95,12 +93,12 @@
                               role="button"
                               class="btn float-end"
                               data-bs-toggle="modal"
-                              data-bs-target="#del_card-{{$card->id}}">
+                              data-bs-target="#del_card-{{$category->id}}">
                               <img
                                 src="{{asset('public/assets/icons/delete.svg')}}"
                                 alt="delete button" />
                             </a>
-                            <div class="modal fade" id="del_card-{{$card->id}}">
+                            <div class="modal fade" id="del_card-{{$category->id}}">
                               <div
                                 class="modal-dialog modal-dialog-centered">
                                 <div class="modal-content">
@@ -148,13 +146,13 @@
                                         </h2>
                                         <p>
                                           Are you sure you want to
-                                          delete this Card?
+                                          delete this category?
                                         </p>
                                       </div>
                                     </div>
                                     <div
                                       class="d-flex align-items-center justify-content-end gap-2 mb-3">
-                                      <form action="{{ route('admin.card.delete' , $card->id) }}" method="POST">
+                                      <form action="{{ route('admin.category.delete' , $category->id) }}" method="POST">
                                         @csrf
                                         @method('DELETE')
                                         <button type="button" class="btn btn-light border" data-bs-dismiss="modal">
@@ -173,7 +171,7 @@
                         </td>
                       </tr>
                       @endforeach
-                    </tbody>
+                    </tbody> 
                   </table>
                 </div>
               </div>
@@ -192,25 +190,25 @@
                 <div class="pagination-div">
                   <nav aria-label="Page navigation example">
                     <ul class="pagination">
-                      @if ($cards->onFirstPage())
+                      @if ($categories->onFirstPage())
                       <li class="page-item disabled">
                         <span class="page-link">Previous</span>
                       </li>
                       @else
                       <li class="page-item">
-                        <a class="page-link" href="{{ $cards->previousPageUrl() }}">Previous</a>
+                        <a class="page-link" href="{{ $categories->previousPageUrl() }}">Previous</a>
                       </li>
                       @endif
 
-                      @foreach ($cards->getUrlRange(1, $cards->lastPage()) as $page => $url)
-                      <li class="page-item {{ $cards->currentPage() == $page ? 'active' : '' }}">
+                      @foreach ($categories->getUrlRange(1, $categories->lastPage()) as $page => $url)
+                      <li class="page-item {{ $categories->currentPage() == $page ? 'active' : '' }}">
                         <a class="page-link" href="{{ $url }}">{{ $page }}</a>
                       </li>
                       @endforeach
 
-                      @if ($cards->hasMorePages())
+                      @if ($categories->hasMorePages())
                       <li class="page-item">
-                        <a class="page-link" href="{{ $cards->nextPageUrl() }}">Next</a>
+                        <a class="page-link" href="{{ $categories->nextPageUrl() }}">Next</a>
                       </li>
                       @else
                       <li class="page-item disabled">
