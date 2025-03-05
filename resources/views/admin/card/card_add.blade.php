@@ -108,7 +108,8 @@
       <div class="dash_header mt-3">
         <div class="dash_title">
           <h2>
-          <a href="#" class="btn btn-teal me-2">← </a>
+          <a href="#" class="btn btn-teal me-2">         <i class="bi bi-arrow-left"></i>
+          </a>
 
           Add New Card</h2>
         </div>

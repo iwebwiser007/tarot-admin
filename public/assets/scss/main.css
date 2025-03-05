@@ -184,6 +184,22 @@
     transform: translateX(-127px);
   }
 }
+.search-container {
+  width: 50%;
+  position: absolute;
+  left: 3%;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
+.search-bar {
+  width: 100%;
+  max-width: 400px;
+  border-radius: 6px;
+  padding: 8px 12px;
+  font-size: 14px;
+}
+
 @media (min-width: 769px) and (max-width: 992px) {
   .header {
     left: 14rem;
@@ -205,6 +221,10 @@
     position: absolute;
   }
 }
+.sidebar-scroll {
+  padding-top: 20px;
+}
+
 .sidebar-wrapper {
   position: fixed;
   top: 0;
@@ -215,8 +235,7 @@
   min-height: 100dvh;
   z-index: 1;
   background-color: #f2fafa;
-  border-right: 1px solid #04aa9e;
-  border-radius: 0 1rem 1rem 0;
+  border-right: 1px solid #cccccc;
   transition: all 0.35s linear;
   -webkit-transition: all 0.35s linear;
   -moz-transition: all 0.35s linear;
@@ -230,7 +249,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
-  background-color: rgba(4, 170, 158, 0.3);
+  border-bottom: 1px solid #cccccc;
 }
 .sidebar-wrapper .sidebar-content .sidebar-logo .navbar-brand {
   padding: 0.8rem 0;
@@ -934,6 +953,22 @@
 }
 .main-right-container .dash_header .dash_title nav .breadcrumb .active {
   color: rgba(56, 69, 85, 0.8);
+}
+.main-right-container .graph-card {
+  gap: 2rem;
+}
+.main-right-container .graph-placeholder {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+  height: 200px;
+  width: 100%;
+  background: #f4f4f4;
+  padding: 20px;
+}
+.main-right-container .bar {
+  width: 40px;
+  background: #16D39A;
 }
 .main-right-container .filter-div {
   display: flex;

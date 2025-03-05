@@ -44,6 +44,25 @@
     }
   }
 
+  .graph-card{
+    gap: 2rem;
+  }
+
+  .graph-placeholder {
+    display: flex;
+    gap: 10px;
+    align-items: flex-end;
+    height: 200px;
+    width: 100%;
+    background: #f4f4f4;
+    padding: 20px;
+}
+.bar {
+    width: 40px;
+    background: #16D39A;
+}
+
+
   .filter-div {
     @include flex-between-center;
     margin-bottom: $margin;

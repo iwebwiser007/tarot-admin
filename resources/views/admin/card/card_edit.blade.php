@@ -63,7 +63,8 @@
                 <div class="dash_title">
                     <h2>
                     
-                    <a href="#" class="btn btn-teal me-2">← </a>
+                    <a href="#" class="btn btn-teal me-2"> <i class="bi bi-arrow-left"></i>
+                    </a>
 
                         Edit Card</h2>
                 </div>

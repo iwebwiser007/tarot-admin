@@ -91,9 +91,12 @@
       <div class="dash_header mt-3">
         <div class="dash_title">
           <h2>
-          <a href="#" class="btn btn-teal me-2">← </a>
+          <a href="#" class="btn btn-teal me-2">         <i class="fa fa-arrow-left"></i>
+          </a>
 
           Add New Offer</h2>
+          
+
         </div>
       </div>
       

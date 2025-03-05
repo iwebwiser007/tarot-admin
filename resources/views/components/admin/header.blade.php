@@ -52,7 +52,22 @@ $admin = \App\Models\User::get()->first();
                   <div
                     class="collapse navbar-collapse"
                     id="navbarSupportedContent"
-                  ></div>
+                  >
+                </div>
+
+   
+                <div class="search-container d-none d-md-block"> 
+    <div class="input-group">
+        <input class="form-control search-bar" type="search" placeholder="Search..." aria-label="Search">
+        <span class="input-group-text"><i class="bi bi-search"></i></span>
+    </div>
+</div>
+
+
+
+
+
+
                   <div class="nav-right">
                     <ul class="navbar-nav">
                       <li class="nav-item dropdown pe-3">

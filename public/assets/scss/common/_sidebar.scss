@@ -1,6 +1,11 @@
 @import "./variable";
 @import "./variable";
 
+.sidebar-scroll{
+  padding-top: 20px;
+}
+
+
 .sidebar-wrapper {
   position: fixed;
   top: 0;
@@ -11,8 +16,8 @@
   min-height: 100dvh;
   z-index: 1;
   background-color: $back-color-1;
-  border-right: 1px solid $primary;
-  border-radius: 0 $spacing $spacing 0;
+  border-right: 1px solid $gray;
+  // border-radius: 0 $spacing $spacing 0 !important;
 
   transition: all 0.35s linear;
   -webkit-transition: all 0.35s linear;
@@ -26,7 +31,8 @@
 
     .sidebar-logo {
       @include flex-center;
-      background-color: rgba($color: $primary, $alpha: 30%);
+      // background-color: rgba($color: $primary, $alpha: 30%);
+      border-bottom: 1px solid $gray;
       .navbar-brand {
         padding: $fs-8 0;
         img {
@@ -34,6 +40,15 @@
           height: calc(($lg-spacing * 2) + $fs-5);
         }
       }
+
+    //   .sidebar-divider {
+    //     width: 80%; // Adjust width as needed
+    //     height: 1px;
+    //     background-color: rgba(255, 255, 255, 0.2); // Light grey separator
+    //     border: none;
+    //     margin: 0.5rem auto; // Centers the line
+    // }
+
     }
 
     // Menu heading
